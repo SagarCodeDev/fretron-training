@@ -19,9 +19,17 @@ I want you to merge those both branches in another third branch test3, resolve c
         then push into test3
 Add one more file in master named “byMistake”, do some code and commit it.
 I want you to make available this file “byMistake” in another branch cut from master named “dedicatedBranch”, with commit.
-    
+        git checkout -b dedicatedBranch
+        git cherry-pick <hash code of commit>
+        git cherry-pick --continue
+        git commit -m "message"
+
 I want you to remove that commit from master.
+        git revert <hash code of the commit we want to undo>
 Temporary commit  :
 Make another branch from master feature branch -> f_test_branch, do some unfinished code. (switch as directed below without committing but yet preserving the code of f_test_branch)
+        git stash save
 Make another branch from master, bug branch -> b_test_branch, and do some code and commit the code.
+        git stash save
 Move back to feature branch and apply temporary changes and commit.
+        git stash apply <commit index>
