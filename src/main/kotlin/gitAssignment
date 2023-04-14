@@ -1,0 +1,27 @@
+In master make a file “common” -> write demo code
+        Created a file named common
+        push that file in the main branch
+        git add .
+        git commit -m "Common file"
+        git push origin main
+Cut a branch from master, test1 -> add some new files , do some changes in common file
+        "git checkout -b test1"
+        do some changes
+Cut another branch from master,test2 ->  add another files, and do some change in common file
+        "git checkout -b test2"
+        do some changes
+I want you to merge those both branches in another third branch test3, resolve conflicts too.
+        to merge into another branch, checkout test3 branch from test2
+        and then merge test1 into that
+        git merge test1
+        solve the conflicts by adding both the changes
+        then commit the code
+        then push into test3
+Add one more file in master named “byMistake”, do some code and commit it.
+I want you to make available this file “byMistake” in another branch cut from master named “dedicatedBranch”, with commit.
+    
+I want you to remove that commit from master.
+Temporary commit  :
+Make another branch from master feature branch -> f_test_branch, do some unfinished code. (switch as directed below without committing but yet preserving the code of f_test_branch)
+Make another branch from master, bug branch -> b_test_branch, and do some code and commit the code.
+Move back to feature branch and apply temporary changes and commit.
