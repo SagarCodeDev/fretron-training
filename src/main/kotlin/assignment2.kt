@@ -1,10 +1,11 @@
+import com.google.gson.JsonObject
 open class Person {
     constructor() {
         println("Parent Constructor Called")
     }
 }
 
-class Student : Person {
+data class Student constructor(var abc: String) : Person() {
     var id: String? = null
     var name: String? = null
     var email: String? = null
@@ -14,7 +15,7 @@ class Student : Person {
         println("Empty Constructor Called")
     }
 
-    constructor(id: String, name: String, email: String, number: String) {
+    constructor(id: String, name: String, email: String, number: String) : this(name) {
         this.id = id
         this.name = name
         this.email = email
@@ -23,18 +24,18 @@ class Student : Person {
     }
 
     override fun toString(): String {
-        return """
-            {
-                "Id": $id,
-                "Name": $name,
-                "Email": $email,
-                "Number": $number,
-            }
-        """.trimIndent()
+        val json = JsonObject()
+        json.addProperty("Id", this.id)
+        json.addProperty("Name", this.name)
+        json.addProperty("Email", this.email)
+        json.addProperty("Number", this.number)
+        return json.toString()
     }
 }
 
 fun main(args: Array<String>) {
     var stu = Student("2", "Sagar", "sagarsheoran79@gmail.com", "7727839857")
+    println(stu)
+    stu = Student()
     println(stu)
 }
