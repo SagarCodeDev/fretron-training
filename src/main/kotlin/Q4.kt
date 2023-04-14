@@ -4,7 +4,7 @@
     * The output array should have the same length as the input array and
     * should not use division in the calculation.
  */
-fun checkProduct(arr: ArrayList<Int>){
+fun checkProduct(arr: ArrayList<Int>) {
     var leftProd = ArrayList<Int>()
     var rightProd = ArrayList<Int>()
     //Use two arrays,First one for calculating the left product and right one to calculate the right product.
@@ -13,7 +13,7 @@ fun checkProduct(arr: ArrayList<Int>){
         if (x == 0) {
             leftProd.add(1)
             rightProd.add(1)
-        } else{
+        } else {
 
             leftProd.add(arr[x - 1] * leftProd[x - 1])
             rightProd.add(arr[arr.size - x] * rightProd[x - 1])

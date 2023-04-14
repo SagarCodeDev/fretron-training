@@ -3,7 +3,7 @@
     *An intersection is defined as the set of elements that are common to both arrays,
     *and the result should not contain any duplicates.
  */
-fun findIntersection(arr1: ArrayList<Int>, arr2: ArrayList<Int>) {
+fun findIntersection(arr1: List<Int>, arr2: List<Int>) {
     var map = HashMap<Int, Int>()//Use map to find the frequency
     for (x in arr1) {
         map[x] = 1
@@ -27,8 +27,8 @@ fun findIntersection(arr1: ArrayList<Int>, arr2: ArrayList<Int>) {
 }
 
 fun main(args: Array<String>){
-    var arr1 = arrayListOf<Int>(1, 2, 2, 3)
-    var arr2 = arrayListOf<Int>(2, 2)
+    var arr1 = mutableListOf(1, 2, 2, 3)
+    var arr2 = mutableListOf(2, 2)
 
     findIntersection(arr1, arr2)
     //Time Complexity - O(n)

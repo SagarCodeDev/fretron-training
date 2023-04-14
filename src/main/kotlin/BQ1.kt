@@ -2,7 +2,7 @@
     *Given a string, find the first non-repeated character in it.
  */
 fun findNonRepeat(str: String): Char {
-    var mp = HashMap<Char, Int>()//used hash map for storing the character frequency
+    var mp = hashMapOf<Char, Int>()//used hash map for storing the character frequency
 
     for (x in str) {
 

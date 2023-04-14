@@ -2,7 +2,7 @@ import kotlin.math.max
 /*
     *Given a string, find the length of the longest substring without repeating characters.
  */
-fun longestSub(str: String):Int{
+fun longestSub(str: String): Int {
     var n = str.length
     var len = 1
     var res = ""

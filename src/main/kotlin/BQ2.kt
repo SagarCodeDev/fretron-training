@@ -2,7 +2,11 @@
     *Given two strings, check if they are anagrams of each other.
  */
 fun checkAnagrams(str1: String, str2: String) {
-    var freqArray = Array<Int>(26) { 0 }//store the frequency of every char in the array
+    var freqArray = mutableListOf<Int>()//store the frequency of every char in the array
+
+    for (x in 0..26){
+        freqArray.add(0)
+    }
     for (x in str1) {
 
         freqArray[x - 'a']++
