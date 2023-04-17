@@ -5,12 +5,12 @@ open class Person {
     }
 }
 
-data class Student constructor(var abc: String) : Person() {
-    var id: String? = null
-    var name: String? = null
-    var email: String? = null
+data class Student constructor(
+    var id: String? = null,
+    var name: String? = null,
+    var email: String? = null,
     var number: String? = null
-
+) : Person() {
     constructor() : this("1", "xyz", "abc@gmail.com", "3434343") {
         println("Empty Constructor Called")
     }
