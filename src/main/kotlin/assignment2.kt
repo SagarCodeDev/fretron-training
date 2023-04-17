@@ -1,4 +1,4 @@
-import com.google.gson.JsonObject
+import org.json.JSONObject
 open class Person {
     constructor() {
         println("Parent Constructor Called")
@@ -24,11 +24,11 @@ data class Student constructor(var abc: String) : Person() {
     }
 
     override fun toString(): String {
-        val json = JsonObject()
-        json.addProperty("Id", this.id)
-        json.addProperty("Name", this.name)
-        json.addProperty("Email", this.email)
-        json.addProperty("Number", this.number)
+        val json = JSONObject()
+        json.put("Id", this.id)
+        json.put("Name", this.name)
+        json.put("Email", this.email)
+        json.put("Number", this.number)
         return json.toString()
     }
 }
